@@ -1,115 +1,103 @@
 
-let firstName = document.getElementById("firstname");
+// let email = document.getElementById("email");
 
-let lastName = document.getElementById("lastname");
+// let password = document.getElementById("password");
 
-let day = document.getElementById("day");
+// let loginBtn = document.getElementById("signupBtn");
 
-let month = document.getElementById("month");
+// let userDataArr = [];
 
-let year = document.getElementById("year");
+// const signupHandler = () => {
+//     const sweetAlert = (error, title, message) => {
+//         Swal.fire({
+//             icon: error,
+//             title: title,
+//             text: message,
+//         });
+//     };
 
-let gender = document.getElementsByName("gender");
+//     if (firstName.value.trim() == "" || lastName.value.trim() == "") {
+//         sweetAlert("error", "Something Went Wrong", "Please enter a name")
+//         return;
+//     };
 
-let email = document.getElementById("email");
+//     if (day.value == "") {
+//         sweetAlert("error", "Something Went Wrong", "Please Enter a day")
+//         return;
+//     };
 
-let password = document.getElementById("password");
+//     if (month.value == "") {
+//         sweetAlert("error", "Something Went Wrong", "Please Enter a month")
+//         return;
+//     };
 
-let signUpBtn = document.getElementById("signupBtn");
+//     if (year.value == "") {
+//         sweetAlert("error", "Something Went Wrong", "Please Enter a year")
+//         return;
+//     };
 
-let userDataArr = [];
+//     let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+//     if (!emailRegex.test(email.value.trim())) {
+//         sweetAlert("error", "Something Went Wrong", "Please Enter a valid email")
+//         return;
+//     };
 
-const signupHandler = () => {
-    const sweetAlert = (error, title, message) => {
-        Swal.fire({
-            icon: error,
-            title: title,
-            text: message,
-        });
-    };
+//     let passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$/;
+//     if (!passwordRegex.test(password.value)) {
+//         sweetAlert("error", "Weak Password", "Password must contain uppercase, number & special character");
+//         return;
+//     };
 
-    if (firstName.value.trim() == "" || lastName.value.trim() == "") {
-        sweetAlert("error", "Something Went Wrong", "Please enter a name")
-        return;
-    };
+//     let userData = {
+//         firstName: firstName.value,
+//         lastName: lastName.value,
+//         day: day.value,
+//         month: month.value,
+//         year: year.value,
+//         email: email.value,
+//         password: password.value
+//     };
 
-    if (day.value == "") {
-        sweetAlert("error", "Something Went Wrong", "Please Enter a day")
-        return;
-    };
+//     let isGenderValid = false;
 
-    if (month.value == "") {
-        sweetAlert("error", "Something Went Wrong", "Please Enter a month")
-        return;
-    };
+//     for (let i = 0; i < gender.length; i++) {
+//         if (gender[i].checked) {
+//             userData.gender = gender[i].value;
+//             isGenderValid = true;
+//             break;
+//         }
+//     }
 
-    if (year.value == "") {
-        sweetAlert("error", "Something Went Wrong", "Please Enter a year")
-        return;
-    };
+//     if (!isGenderValid) {
+//         sweetAlert("error", "Something Went Wrong", "Please select your gender");
+//         return;
+//     };
 
-    let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (!emailRegex.test(email.value.trim())) {
-        sweetAlert("error", "Something Went Wrong", "Please Enter a valid email")
-        return;
-    };
+//     userDataArr.push(userData);
 
-    let passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$/;
-    if (!passwordRegex.test(password.value)) {
-        sweetAlert("error", "Weak Password", "Password must contain uppercase, number & special character");
-        return;
-    };
+//     console.log(userDataArr);
 
-    let userData = {
-        firstName: firstName.value,
-        lastName: lastName.value,
-        day: day.value,
-        month: month.value,
-        year: year.value,
-        email: email.value,
-        password: password.value
-    };
+//     localStorage.setItem("users", JSON.stringify(userDataArr));
 
-    let isGenderValid = false;
+//     sweetAlert("success", "Signup Successfully", "Congratulations")
 
-    for (let i = 0; i < gender.length; i++) {
-        if (gender[i].checked) {
-            userData.gender = gender[i].value;
-            isGenderValid = true;
-            break;
-        }
-    }
+//     firstName.value = "";
 
-    if (!isGenderValid) {
-        sweetAlert("error", "Something Went Wrong", "Please select your gender");
-        return;
-    };
+//     lastName.value = "";
 
-    userDataArr.push(userData);
+//     day.value = "";
 
-    console.log(userDataArr);
+//     month.value = "";
 
-    localStorage.setItem("users", JSON.stringify(userDataArr));
+//     year.value = "";
 
-    sweetAlert("success", "Signup Successfully", "Congratulations")
+//     email.value = "";
 
-    firstName.value = "";
+//     password.value = "";
 
-    lastName.value = "";
+//     for (let i = 0; i < gender.length; i++) {
+//         gender[i].checked = false;
+//     };
+// };
 
-    day.value = "";
-
-    month.value = "";
-
-    year.value = "";
-
-    email.value = "";
-
-    password.value = "";
-
-    for (let i = 0; i < gender.length; i++) {
-        gender[i].checked = false;
-    };
-};
-
-signUpBtn.addEventListener("click", signupHandler);
+// loginBtn.addEventListener("click", signupHandler);
