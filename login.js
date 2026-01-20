@@ -7,7 +7,7 @@ let loginBtn = document.getElementById("loginBtn");
 
 let userDataArr = [];
 
-let loginHandler = () => {
+// const loginHandler = () => {
     const sweetAlert = (error, title, message) => {
         Swal.fire({
             icon: error,
