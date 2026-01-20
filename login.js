@@ -3,37 +3,17 @@ let email = document.getElementById("email");
 
 let password = document.getElementById("password");
 
-let loginBtn = document.getElementById("signupBtn");
+let loginBtn = document.getElementById("loginBtn");
 
 let userDataArr = [];
 
-const signupHandler = () => {
+const loginHandler = () => {
     const sweetAlert = (error, title, message) => {
         Swal.fire({
             icon: error,
             title: title,
             text: message,
         });
-    };
-
-    if (firstName.value.trim() == "" || lastName.value.trim() == "") {
-        sweetAlert("error", "Something Went Wrong", "Please enter a name")
-        return;
-    };
-
-    if (day.value == "") {
-        sweetAlert("error", "Something Went Wrong", "Please Enter a day")
-        return;
-    };
-
-    if (month.value == "") {
-        sweetAlert("error", "Something Went Wrong", "Please Enter a month")
-        return;
-    };
-
-    if (year.value == "") {
-        sweetAlert("error", "Something Went Wrong", "Please Enter a year")
-        return;
     };
 
     let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -100,4 +80,4 @@ const signupHandler = () => {
     };
 };
 
-loginBtn.addEventListener("click", signupHandler);
+loginBtn.addEventListener("click", loginHandler);
