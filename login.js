@@ -7,7 +7,7 @@ let loginBtn = document.getElementById("loginBtn");
 
 let userDataArr = [];
 
-const loginHandler = () => {
+let loginHandler = () => {
     const sweetAlert = (error, title, message) => {
         Swal.fire({
             icon: error,
@@ -41,7 +41,7 @@ const loginHandler = () => {
 
     localStorage.setItem("users", JSON.stringify(userDataArr));
 
-    sweetAlert("success", "Signup Successfully", "Congratulations")
+    sweetAlert("success", "Login Successfully", "Congratulations");
 
     email.value = "";
 
